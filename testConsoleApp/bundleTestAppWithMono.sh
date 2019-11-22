@@ -4,14 +4,6 @@
 MONOROOT="/Library/Frameworks/Mono.framework"
 export PATH="$PATH:$MONOROOT/Commands"
 
-## print out current mono versions
-ls $MONOROOT/Versions
-$MONOROOT/Versions/Current/bin/mono -V
-pushd $MONOROOT/Versions/Current
-MONOVERSIONPATH=($(pwd -P))
-popd
-echo "MONOVERSIONSPATH: $MONOVERSIONPATH"
-
 ##################################################
 # Configure Mono Versions                        #
 ##################################################
