@@ -1,5 +1,8 @@
 Test console app designed to show that bundling a .NET exe with mono results in either a binary that cannot be signed or a binary that crashes.
 
+Related bug, cannot find any other references to this issue on mono github / stack overflow / xamarin community forums
+https://xamarin.github.io/bugzilla-archives/52/52443/bug.html
+
 Requirements:
    - Mac OS 10.14.6
    - Visual Studio for Mac 8.3.9
@@ -18,7 +21,7 @@ Case 1:
 
 Expected: signing to be succesful
 
-Actual: signing is unsuccesful
+Actual: signing is unsuccesful, 'testConsoleApp: main executable failed strict validation'
 
 
 Case 2:
