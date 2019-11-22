@@ -23,7 +23,7 @@ Case 1:
 
 Expected: signing to be successful
 
-Actual: signing is unsuccessful, 'testConsoleApp: main executable failed strict validation'
+Actual: signing is unsuccessful, error in console: "testConsoleApp: main executable failed strict validation"
 
 
 Case 2:
