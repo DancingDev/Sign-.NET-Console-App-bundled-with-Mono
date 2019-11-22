@@ -17,6 +17,7 @@ Case 1:
 3. in the project folder execute './signTestConsoleApp.sh strict {cert-to-use}', which code signs with --strict -o runtime and entitlements
 
 Expected: signing to be succesful
+
 Actual: signing is unsuccesful
 
 
@@ -29,5 +30,6 @@ Case 2:
 3. in the project folder execute './signTestConsoleApp.sh strict {cert-to-use}', which code signs with --strict -o runtime and entitlements
 
 Expected: signing to be succesful
-Actua: signing is succesful, but the program still seg faults when executed "./bin/Debug/testConsoleApp"
+
+Actual: signing is succesful, but the program still seg faults when executed "./bin/Debug/testConsoleApp"
 
