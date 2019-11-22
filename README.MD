@@ -27,7 +27,7 @@ Actual: signing is unsuccesful, 'testConsoleApp: main executable failed strict v
 
 
 Case 2:
-1. compile the testConsoleAppProduct in VS with succesful config, produces testConsoleApp.exe
+1. compile the testConsoleAppProduct in VS with release config, produces testConsoleApp.exe
 2. in the project folder execute './bundleTestAppWithMono.sh L' which calls mkbundle with -L and passes mono directory for the path
    - https://www.mono-project.com/docs/tools+libraries/tools/mkbundle/ per documentation here
    - produces testConsoleApp binary which seg faults, error code 11, when run on the command line "./bin/Debug/testConsoleApp"
