@@ -1,4 +1,4 @@
-Test console app designed to show that bundling a .NET exe with mono results in either a binary that cannot be signed or a binary that crashes.
+Test console app designed to show that bundling a .NET exe with mono results in either a binary that cannot be signed or a binary that crashes when run.
 
 Related bug, cannot find any other references to this issue on mono github / stack overflow / xamarin community forums
 https://xamarin.github.io/bugzilla-archives/52/52443/bug.html
@@ -21,9 +21,9 @@ Case 1:
 
 3. in the project folder execute './signTestConsoleApp.sh strict {cert-to-use}', which code signs with --strict -o runtime and entitlements
 
-Expected: signing to be succesful
+Expected: signing to be successful
 
-Actual: signing is unsuccesful, 'testConsoleApp: main executable failed strict validation'
+Actual: signing is unsuccessful, 'testConsoleApp: main executable failed strict validation'
 
 
 Case 2:
@@ -35,9 +35,9 @@ Case 2:
 
 3. in the project folder execute './signTestConsoleApp.sh strict {cert-to-use}', which code signs with --strict -o runtime and entitlements
 
-Expected: signing to be succesful
+Expected: signing to be successful
 
-Actual: signing is succesful, but the program still seg faults when executed "./bin/Debug/testConsoleApp"
+Actual: signing is successful, but the program still seg faults when executed "./bin/Debug/testConsoleApp"
 
 
 
