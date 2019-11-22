@@ -31,6 +31,7 @@ Case 2:
 2. in the project folder execute './bundleTestAppWithMono.sh L' which calls mkbundle with -L and passes mono directory for the path
    - https://www.mono-project.com/docs/tools+libraries/tools/mkbundle/ per documentation here
    - produces testConsoleApp binary which seg faults, error code 11, when run on the command line "./bin/Debug/testConsoleApp"
+   - stack trace here: https://github.com/DancingDev/Sign-.NET-Console-App-bundled-with-Mono/blob/master/testConsoleApp/testConsoleApp-Crash-Trace.txt
 
 3. in the project folder execute './signTestConsoleApp.sh strict {cert-to-use}', which code signs with --strict -o runtime and entitlements
 
