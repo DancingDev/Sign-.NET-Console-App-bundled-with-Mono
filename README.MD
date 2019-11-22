@@ -40,6 +40,7 @@ Actual: signing is succesful, but the program still seg faults when executed "./
 
 
 Note: the entitlements being used in entitlements.plist, which most likely are not neccessary, but came from discussions similar to https://github.com/MonoGame/MonoGame/issues/6816 . The disabling of library validation was neccessary due to the dynmamic library importing being blocked due to the signing not being trusted.
+```
     <key>com.apple.security.cs.allow-jit</key>
     <true/>
     <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
@@ -50,3 +51,4 @@ Note: the entitlements being used in entitlements.plist, which most likely are n
     <true/>
     <key>com.apple.security.cs.allow-dyld-environment-variables</key>
     <true/>
+ ```
