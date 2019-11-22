@@ -8,6 +8,7 @@ Requirements:
    - Visual Studio for Mac 8.3.9
    - XCode 11
    - Mono 6.4.0
+   - A Signing Certificate (self signed used below)
 
 Steps to reproduce issue(s)
 
@@ -36,3 +37,16 @@ Expected: signing to be succesful
 
 Actual: signing is succesful, but the program still seg faults when executed "./bin/Debug/testConsoleApp"
 
+
+
+Note: the entitlements being used in entitlements.plist, which most likely are not neccessary, but came from discussions similar to https://github.com/MonoGame/MonoGame/issues/6816 . The disabling of library validation was neccessary due to the dynmamic library importing being blocked due to the signing not being trusted.
+    <key>com.apple.security.cs.allow-jit</key>
+    <true/>
+    <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+    <true/>
+    <key>com.apple.security.cs.disable-executable-page-protection</key>
+    <true/>
+    <key>com.apple.security.cs.disable-library-validation</key>
+    <true/>
+    <key>com.apple.security.cs.allow-dyld-environment-variables</key>
+    <true/>
