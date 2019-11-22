@@ -3,6 +3,9 @@ Test console app designed to show that bundling a .NET exe with mono results in 
 Related bug, cannot find any other references to this issue on mono github / stack overflow / xamarin community forums
 https://xamarin.github.io/bugzilla-archives/52/52443/bug.html
 
+Open mono issue on mono's github:
+https://github.com/mono/mono/issues/17881
+
 Requirements:
    - Mac OS 10.14.6
    - Visual Studio for Mac 8.3.9
