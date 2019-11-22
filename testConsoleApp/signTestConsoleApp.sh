@@ -1,5 +1,5 @@
 
-pushd bin/Debug
+pushd bin/Release
 
 CERT=$2
 

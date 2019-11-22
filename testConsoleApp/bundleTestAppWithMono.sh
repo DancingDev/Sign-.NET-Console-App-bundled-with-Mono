@@ -48,7 +48,7 @@ echo ""
 # Mono Configuration Complete                    #
 ##################################################
 
-pushd bin/Debug
+pushd bin/Release
 
 rm -rf testConsoleApp
 
