@@ -9,6 +9,7 @@ Requirements:
    - XCode 11
    - Mono 6.4.0
    - A Signing Certificate (self signed used below)
+      - https://support.apple.com/guide/keychain-access/create-self-signed-certificates-kyca8916/mac
 
 Steps to reproduce issue(s)
 
