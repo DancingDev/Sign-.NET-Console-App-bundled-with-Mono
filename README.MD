@@ -1,7 +1,10 @@
-Test console app designed to show that bundling a .NET exe with mono results in either a binary that cannot be signed or a binary that crashes.
+Test console app designed to show that bundling a .NET exe with mono results in either a binary that cannot be signed or a binary that crashes when run.
 
 Related bug, cannot find any other references to this issue on mono github / stack overflow / xamarin community forums
 https://xamarin.github.io/bugzilla-archives/52/52443/bug.html
+
+Open mono issue on mono's github:
+https://github.com/mono/mono/issues/17881
 
 Requirements:
    - Mac OS 10.14.6
@@ -21,22 +24,23 @@ Case 1:
 
 3. in the project folder execute './signTestConsoleApp.sh strict {cert-to-use}', which code signs with --strict -o runtime and entitlements
 
-Expected: signing to be succesful
+Expected: signing to be successful
 
-Actual: signing is unsuccesful, 'testConsoleApp: main executable failed strict validation'
+Actual: signing is unsuccessful, error in console: "testConsoleApp: main executable failed strict validation"
 
 
 Case 2:
-1. compile the testConsoleAppProduct in VS with succesful config, produces testConsoleApp.exe
+1. compile the testConsoleAppProduct in VS with release config, produces testConsoleApp.exe
 2. in the project folder execute './bundleTestAppWithMono.sh L' which calls mkbundle with -L and passes mono directory for the path
    - https://www.mono-project.com/docs/tools+libraries/tools/mkbundle/ per documentation here
    - produces testConsoleApp binary which seg faults, error code 11, when run on the command line "./bin/Debug/testConsoleApp"
+   - stack trace here: https://github.com/DancingDev/Sign-.NET-Console-App-bundled-with-Mono/blob/master/testConsoleApp/testConsoleApp-Crash-Trace.txt
 
 3. in the project folder execute './signTestConsoleApp.sh strict {cert-to-use}', which code signs with --strict -o runtime and entitlements
 
-Expected: signing to be succesful
+Expected: signing to be successful
 
-Actual: signing is succesful, but the program still seg faults when executed "./bin/Debug/testConsoleApp"
+Actual: signing is successful, but the program still seg faults when executed "./bin/Debug/testConsoleApp"
 
 
 
