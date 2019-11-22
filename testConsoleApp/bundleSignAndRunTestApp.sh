@@ -19,7 +19,7 @@ mkbundle -v -o testConsoleApp --deps --simple testConsoleApp.exe \
                                --sdk $MONOROOT/Versions/Current
 
 echo "sign app"
-codesign -f --strict --verbose --entitlements $ENTSFILE -o runtime -s $CERT testConsoleApp.exe --timestamp
+codesign -f --strict --verbose --entitlements $ENTSFILE -o runtime -s $CERT testConsoleApp --timestamp
 popd
 
 echo "verify app"
